@@ -87,7 +87,7 @@ else:
 
             # Timestamp
             timestamp = datetime.now().strftime("%d-%b-%Y %I:%M %p")
-            st.caption(f"⏱️ Last update ond: {timestamp}")
+            st.caption(f"⏱️ Last update on: {timestamp}")
 
         except:
             st.error("⚠⚠️️ Failed to fetch data. Please try again later.")
