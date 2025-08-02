@@ -17,7 +17,7 @@ st.markdown("""
     }
     .author {
         text-align: center;
-        font-size: 25px !important;
+        font-size: 30px !important;
         color: white;
         font-weight: bold;
     }
@@ -68,8 +68,8 @@ if mode == "Manual":
         c = st.number_input("Enter Close", min_value=0.0, format="%.2f")    
 
 else:
-    with st.spinner("🔄 Fetching latest NIFTY 50 data..."):
-        time.sleep(2)  # Animation delay
+    with st.spinner("🔄 Fetching latest NIFTY 50 data...."):
+        time.sleep(3)  # Animation delay
         try:
             nifty = yf.Ticker("^NSEI")
             hist = nifty.history(period="1d")
@@ -77,7 +77,7 @@ else:
             l = hist['Low'].iloc[0]
             c = hist['Close'].iloc[0]
 
-            st.success("✅✅ Latest NIFTY 50 data fetched successfully!")
+            st.success("✅✅ Latest NIFTY 50 data fetched successfully!!!")
 
             # --- Metrics display ---
             col1, col2, col3 = st.columns(3)
